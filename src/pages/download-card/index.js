@@ -251,7 +251,7 @@ const DownloadPVCcard = () => {
                                   border: 0,
                                   color: "#000",
                                   fontWeight: 700,
-                                  width: 170,
+                                  // width: 170,
                                   zIndex:1999
                                 }}
                               >
