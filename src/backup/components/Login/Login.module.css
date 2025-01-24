@@ -1,0 +1,60 @@
+.loginForImage {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.backDrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #00000078;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.backDrop span {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* .backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(114deg, #22437d 36%, #fff 0%);
+    z-index: -1;
+} */
+
+
+.fullbg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('/hp_bg.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+/* .newSlider img{
+    max-height: 83vh !important;
+    width: auto !important;
+}
+
+.newSlider div{
+ background-color: #f6f6f6;
+} */

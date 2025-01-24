@@ -1,0 +1,489 @@
+.cardContainer {
+    max-width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.cardContainer {
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.cardFooter {
+    height: 68%;
+}
+
+.cardHeader {
+    background: #f5903a;
+    color: #fff;
+}
+
+.cardFooter {
+    background: #23b168;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cardHeader {
+    border-top: 11px solid orange;
+}
+
+.centerDesign {
+    height: 11px;
+    background: #fff;
+}
+
+.nameContainer {
+    margin-left: 10px;
+}
+
+.logoColerInverse {
+    filter: invert(1) drop-shadow(0px 0px 0px #fff);
+}
+
+/* ======== */
+
+
+
+.whitebg .cardContainer {
+    background: #fff;
+    color: #000;
+}
+
+.whitebg .logoColerInverse {
+    filter: invert(0) drop-shadow(0px 0px 0px #000);
+}
+
+.whitebg .centerDesign {
+    background: green;
+}
+
+.whitebg .cardFooter {
+    background: #fff;
+}
+
+.imageWithName img {
+    box-shadow: 2px 4px 11px -10px #000;
+    border: 1px solid #7d7d7d;
+}
+
+.whitebg .cardHeader {
+    background: #fff;
+    color: #000;
+}
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000000ad;
+    z-index: 111;
+}
+
+.closePop {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    right: 47px;
+    top: 22px;
+    cursor: pointer;
+}
+
+.closePop i {
+    background: red;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+.fontSize {
+    font-size: 14px;
+}
+
+
+/* ====pvc card=== */
+.cardHeaderpvc {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+
+}
+
+.cardCoverpvc {
+    border: 2px solid #cdcdcd;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 318px;
+    height: 210px;
+
+}
+
+.cardCoverpvc2 {
+    border: 2px solid #cdcdcd;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 318px;
+    height: 225px;
+
+}
+
+
+.cardHeaderNames {
+    text-align: center;
+    z-index: 1999;
+}
+
+.cardHeaderNames h6 {
+    font-size: 10px;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.cardHeaderNames h7 {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #010080;
+}
+
+.cardHeaderNames h10 {
+    font-size: 8px;
+    color: #010080;
+    position: absolute;
+    top: 232px;
+    left: 15px
+}
+
+
+
+.stickyBottom h8 {
+    font-size: 6px;
+    color: #010080;
+}
+
+.stickyBottom h9 {
+    font-size: 6px;
+    color: #000;
+    top: 17px;
+    position: absolute;
+    left: 0;
+}
+
+.stickyBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 130px;
+    flex-shrink: 0;
+    /* Make the div stretch across the container */
+    /* Example background color */
+    /* Add other styles as needed */
+}
+
+
+.stickyBottom h10 {
+    font-size: 8px;
+    color: #010080;
+    position: absolute;
+    top: 262px;
+    left: 15px
+}
+
+.horizontalText {
+    /* Prevent text from wrapping */
+    /* Hide any overflow */
+    text-overflow: ellipsis;
+    font-size: 6px;
+    transform: rotate(450deg);
+    position: absolute;
+    left: 140px;
+    width: 200px;
+    top: 90px;
+    /* Add ellipsis if text overflows */
+    /* Other styles as needed */
+}
+
+
+
+.dottedLine {
+    overflow: hidden;
+
+}
+
+.dottedLine::after {
+    content: "..........................................................................................................";
+    font-size: 17px;
+}
+
+
+
+.stickyBottom h11 {
+    font-size: 6px;
+    color: #010080;
+    position: absolute;
+    top: 11px;
+    left: 215px
+}
+
+
+.stickyBottom h12 {
+    font-size: 6px;
+    color: #010080;
+    position: absolute;
+    top: 19px;
+    left: 215px
+}
+
+.stickyBottom h13 {
+    font-size: 14px;
+    color: #010080;
+    position: absolute;
+    top: 200px;
+    left: 180px;
+
+}
+
+.stickyBottom h15 {
+    font-size: 8px;
+    color: #010080;
+    position: absolute;
+    top: 15px;
+    left: 140px;
+
+}
+
+
+
+.cardHeaderNames p {
+    margin-bottom: 0;
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: #000;
+}
+
+.cardbodypvc {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mountainBg {
+    position: absolute;
+    max-width: 100%;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    /* Maintain aspect ratio and cover the entire container */
+    /* Position the image absolutely within its container */
+
+
+}
+
+.bg-img {
+    width: 100%;
+    /* Make the image take the full width of its container */
+    height: 100%;
+    /* Make the image take the full height of its container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+    position: absolute;
+    /* Position the image absolutely within its container */
+    top: 0;
+    left: 0;
+}
+
+
+.infoUser {
+    list-style: none;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.infoUser li {
+    color: #000;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2rem;
+
+}
+
+.flexWapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+.label {
+    display: block;
+    float: left;
+    width: 60px;
+    text-align: left;
+    font-size: 8px;
+    font-weight: 700;
+    color: #000
+}
+
+.colon {
+    display: block;
+    float: left;
+    width: 10px;
+    text-align: center;
+}
+
+.infoUser li {
+    clear: left;
+}
+
+.valueli {
+    display: table;
+}
+
+.cardCoverpvcback {
+    border-top: 10px solid #FF671F;
+    border-bottom: 10px solid #046A38;
+}
+
+.memberDetails {
+    font-size: 11px;
+}
+
+/* .main-page table,
+td,
+th {
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+} */
+
+.main-page table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.main-page table th {
+    text-align: left;
+
+}
+
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.specific-page {
+    width: 600px;
+    /* Set a fixed width for the specific page */
+    /* Or */
+    min-width: 600px;
+    /* Set a minimum width for the specific page */
+    /* Add other styles as needed */
+}
+
+.scrollable-div {
+    width: 300px;
+    /* Set the specific width */
+    height: 200px;
+    /* Set the specific height */
+    overflow: auto;
+    /* Enable scrollbars when content overflows */
+    border: 1px solid #ccc;
+    /* Optional: Add a border for visibility */
+    /* Add other styles as needed */
+}
+
+.containercard {
+    display: flex;
+    flex-direction: row;
+}
+
+.rowcard {
+    display: flex;
+}
+
+.columncard {
+    flex: 1;
+    border: 1px solid #ccc;
+    /* Add borders for visualization */
+}
+
+.aadhaar-card {
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #1976d2;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.aadhaar-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+.user-photo {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #1976d2;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.card-details {
+    display: flex;
+    padding: 20px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info p {
+    margin-bottom: 8px;
+}
+
+.info strong {
+    font-weight: bold;
+}
+
+.topMargin {}
