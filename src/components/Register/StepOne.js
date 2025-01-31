@@ -1339,6 +1339,25 @@ const StepOne = ({
           if (vault.$.aadhaarReferenceNumber) {
             setVaultId(vault.$.aadhaarReferenceNumber);
           }
+          if (uidData?.Pht) {
+            if (uidData?.Pht) {
+              const resData = {
+                aadhaarNo: plainAadhaar,
+                profilePhoto: uidData?.Pht
+              };
+              const phtResponse = await fetch(
+                `${process?.env?.NEXT_PUBLIC_NODE_HIMPARIVAR}ekyc/upload-ekyc-photo`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(resData)
+                }
+              );
+            }
+
+          }
           setProfilePhoto(uidData?.Pht)
           setName(uidData.Poi.$.name);
           setGender(uidData.Poi.$.gender);

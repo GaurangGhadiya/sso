@@ -32,24 +32,6 @@ export default async function handler(req, res) {
           if (result.KycRes.$.err) {
             res.status(500).json({ error: "An error occurred" });
           } else {
-            console.log('result', result)
-            if (result.KycRes.UidData?.Pht) {
-              const resData = {
-                aadhaarNo: aadharNumber?.replace(/-/g, ''),
-                profilePhoto: result.KycRes.UidData?.Pht
-              };
-              const phtResponse = await fetch(
-                `${process?.env?.NEXT_PUBLIC_NODE_HIMPARIVAR}/ekyc/upload-ekyc-photo`,
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(resData)
-                }
-              );
-            }
-
             res
               .status(200)
               .json({ uidData: result.KycRes.UidData, vault: result.KycRes });
