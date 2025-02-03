@@ -21,8 +21,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     // domains: ['ssostaging.hp.gov.in'],
-    // domains: ["localhost", "himstaging2.hp.gov.in"], // staging
-    domains: ["localhost", "sso.hp.gov.in", 'cdn.myscheme.in', 'himparivaranalytics.hp.gov.in'], // production
+    // domains: ["localhost", "himstaging2.hp.gov.in", 'himparivaranalytics.hp.gov.in'], // staging
+    domains: ["localhost", "sso.hp.gov.in", "himstaging2.hp.gov.in", 'cdn.myscheme.in', 'himparivaranalytics.hp.gov.in'], // production
   },
 };
 
