@@ -230,7 +230,7 @@ const DownloadPVCcard = () => {
                             <Grid item xs={2.5}>
                               <div>
                                 <Image
-                                  src={photo}
+                                  src={photo?photo:getImagePath("/images/user.jpg")}
                                   height={55}
                                   width={45}
                                   style={{ marginLeft: 10, marginTop: 5 }}
