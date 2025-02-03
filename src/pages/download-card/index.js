@@ -71,39 +71,37 @@ const DownloadPVCcard = () => {
 
                     console.log(data, "adjkansdsjkad")
 
-			try {
+                  try {
+                    // setIsPhotoLoading(true);
 
-				// setIsPhotoLoading(true);
+                    const response1 = await fetch(
+                      process.env.NEXT_PUBLIC_NODE_HIMPARIVAR +
+                      "member/getMember_aadhaar_Photo?aadhaar_number=" +
+                      data.aadhaarNumber,
+                      {
+                        headers: {
+                          "Content-Type": "application/x-www-form-urlencoded",
+                          // 'Authorization': tokenStore
+                        },
+                      }
+                    );
 
-        const response1 = await fetch(process.env.NEXT_PUBLIC_NODE_HIMPARIVAR + 'member/getMemberPhoto?memberid=' + "", {
-					headers: {
-						'Content-Type': 'application/x-www-form-urlencoded',
-						// 'Authorization': tokenStore
-					}
-				});
-
-        console.log(response1, "asdhjbasjbhdashjdjhd  ")
-
-
-				const data1 = await response1.json();
-				// Process the retrieved data
-				if (data1.status === 200) {
-
-          console.log(data1.image, "asdhjbasjbhdashjdjhd  ")
-					setphoto('data:image/png;base64,' + data1.image)
-					// setIsPhotoLoading(false);
-				} else {
-					// setUserImage('Not Available');
-					// setIsPhotoLoading(false);
-
-				}
-
-			} catch (error) {
-				// Handle any errors that occurred during the request
-				console.error('Error:', error);
-				// setIsPhotoLoading(false);
-
-			}
+                    setphoto(response1.url)
+                    // const data1 = await response1.json();
+                    // // Process the retrieved data
+                    // if (data1.status === 200) {
+                    //   console.log(data1.image, "asdhjbasjbhdashjdjhd  ");
+                    //   setphoto("data:image/png;base64," + data1.image);
+                    //   // setIsPhotoLoading(false);
+                    // } else {
+                    //   // setUserImage('Not Available');
+                    //   // setIsPhotoLoading(false);
+                    // }
+                  } catch (error) {
+                    // Handle any errors that occurred during the request
+                    console.error("Error:", error);
+                    // setIsPhotoLoading(false);
+                  }
 
 
                 }
@@ -231,10 +229,10 @@ const DownloadPVCcard = () => {
                             {/* First Row */}
                             <Grid item xs={2.5}>
                               <div>
-                                <img
-                                  src={photo?photo:getImagePath("/images/user.jpg")}
-                                  height={"55px"}
-                                  width={"45px"}
+                                <Image
+                                  src={photo}
+                                  height={55}
+                                  width={45}
                                   style={{ marginLeft: 10, marginTop: 5 }}
                                 />
                               </div>

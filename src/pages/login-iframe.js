@@ -35,7 +35,7 @@ const LoginIframe = () => {
 				Cookies.remove(cookieName, neededAttributes);
 			});
 		} catch (error) {}
-	}, []);
+	}, [router]);
 
 	return (
 		<>
