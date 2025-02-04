@@ -7,7 +7,7 @@ import Link from "next/link";
 import AadhaarLogin from "./AadhaarLogin";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
+import CallIcon from '@mui/icons-material/Call';
 import {
 	Box,
 	Container,
@@ -356,6 +356,10 @@ const NewLoginIframe = ({ service_id, is_iframe, login_type }) => {
 														New user? Sign up for Himachal Pradesh Citizen Login
 													</Typography>
 												</Link>
+												<Box display={'flex'} alignItems={'center'} justifyContent={'center'} mt={1}>
+													<CallIcon style={{ color: '#1976D2', fontSize: "18px" }} />
+													<Typography fontSize={"12px"} fontWeight={600} ml={0.5}>Digital Helpline: 1100</Typography>
+												</Box>
 											</TabContext>
 										</TabPanel>
 

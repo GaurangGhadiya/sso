@@ -13,6 +13,7 @@ import {
 	AppBar,
 	Toolbar,
 } from "@mui/material";
+import CallIcon from '@mui/icons-material/Call';
 import { useEffect, useRef, useState } from "react";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -326,6 +327,10 @@ const NewLogin = () => {
 														New user? Sign up for Citizen Login
 													</Typography>
 												</Link>
+												<Box display={'flex'} alignItems={'center'} justifyContent={'center'} mt={1}>
+													<CallIcon  style={{ color: '#1976D2' , fontSize : "18px"}}/>
+													<Typography fontSize={"12px"} fontWeight={600} ml={0.5}>Digital Helpline: 1100</Typography>
+												</Box>
 											</TabContext>
 										</TabPanel>
 
