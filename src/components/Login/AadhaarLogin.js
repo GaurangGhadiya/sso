@@ -102,6 +102,7 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
   });
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
+  const [HimAccessId, setHimAccessId] = useState('')
 
   const [selectedUsername, setselectedUsername] = useState("");
 
@@ -109,7 +110,7 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
 
   const [emailCount, setEmailCount] = useState(0);
 
-  const [selectedDropdown, setSelectedDropdown] = useState("Aadhaar");
+  const [selectedDropdown, setSelectedDropdown] = useState("HimAccessId");
 
   const [password, setPassword] = useState("");
   const [minutes, setMinutes] = useState(0);
@@ -651,6 +652,16 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
         return;
       }
     }
+    if (selectedDropdown === "HimAccessId") {
+      if (HimAccessId.length != 10) {
+        setAlert({
+          open: true,
+          type: false,
+          message: "Please enter valid 10 digit Him Access ID",
+        });
+        return;
+      }
+    }
 
     const userDetail = await userDetails.json();
 
@@ -663,6 +674,9 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
         usr = plainAadhaar;
       } else if (selectedDropdown === "Email" && !selectedUsername) {
         usr = email;
+      }
+       else if (selectedDropdown === "HimAccessId" && !selectedUsername) {
+        usr = HimAccessId;
       }
 
       const reqData = {
@@ -679,7 +693,7 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
             ).toString()
           : "",
       };
-
+console.log('reqData', reqData)
       const response = await api.post("/user/email-login", { data: encryptBody(JSON.stringify(reqData)) });
 
 
@@ -1149,13 +1163,17 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
           {"Select Login Type"}{" "}
         </Typography>
         <Select
-          defaultValue="Aadhaar Number"
+          defaultValue="Him Access ID"
           placeholder={"Select Login Type"}
           size="medium"
           variant={"outlined"}
           style={{ width: "100%", marginBottom: 16, borderRadius: 5 }}
           onChange={handleChange}
           options={[
+            {
+              value: "HimAccessId",
+              label: "Him Access ID",
+            },
             {
               value: "Aadhaar",
               label: "Aadhaar Number",
@@ -1168,6 +1186,31 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
         />
 
         <Box mb={1}>
+          {selectedDropdown === "HimAccessId" && (
+            <>
+              <Typography color={"#1876d1"} style={{ fontSize: 12 }}>
+                {"Enter Him Access ID "}{" "}
+              </Typography>
+
+              <Input
+                placeholder="Enter your Him Access ID"
+                size={"medium"}
+                variant={"outlined"}
+                style={{ borderRadius: 5 }}
+                value={HimAccessId}
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                onChange={(e) => {
+                  // setEmailList([]);
+                  // setselectedUsername("");
+                  setHimAccessId(e.target.value);
+                }}
+                // onBlur={() => {
+                //   checkEmailExistence();
+                // }}
+                allowClear
+              />
+            </>
+          )}
           {selectedDropdown === "Aadhaar" && (
             <>
               <Typography color={"#1876d1"} style={{ fontSize: 12 }}>

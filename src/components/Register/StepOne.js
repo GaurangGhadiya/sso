@@ -1808,7 +1808,7 @@ const StepOne = ({
             options={[
               { value: "Aadhaar", label: "Aadhaar Number" },
               { value: "HimId", label: "Him Parivar ID" },
-              { value: "HimMemberId", label: "Him Member ID" },
+              // { value: "HimMemberId", label: "Him Member ID" },
               { value: "Ration", label: "Ration Card" },
             ]}
           />

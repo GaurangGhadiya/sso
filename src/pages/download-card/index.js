@@ -28,7 +28,6 @@ import Layout from "@/components/Dashboard/layout";
 const DownloadPVCcard = () => {
   const dispatch = useDispatch();
   const uid = Cookies.get("uid");
-  console.log('uid', uid)
 
   const [memberDetail, setMemberDetail] = useState({});
   const [loader, setLoader] = useState(false);
@@ -69,7 +68,6 @@ const DownloadPVCcard = () => {
                     setLoader(false);
 
 
-                    console.log(data, "adjkansdsjkad")
 
                   try {
                     // setIsPhotoLoading(true);
