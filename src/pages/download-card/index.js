@@ -83,8 +83,14 @@ const DownloadPVCcard = () => {
                         },
                       }
                     );
+                    console.log('response1', response1)
+                    if (response1.status === 500 || response1?.ok == false) {
+                      setphoto("")
+                     }
+                    else {
 
-                    setphoto(response1.url)
+                      setphoto(response1.url)
+                    }
                     // const data1 = await response1.json();
                     // // Process the retrieved data
                     // if (data1.status === 200) {
@@ -243,7 +249,7 @@ const DownloadPVCcard = () => {
                                 border="0"
                                 style={{
                                   fontSize: 11,
-
+                                  width: 'max-content',
                                   border: 0,
                                   color: "#000",
                                   fontWeight: 700,
