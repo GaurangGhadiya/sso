@@ -215,6 +215,12 @@ const AadhaarLogin = ({ redirectForLogin, service_id, iframe, props }) => {
               }
             }
           });
+        } else {
+          setAlert({
+              open: true,
+              type: false,
+              message: error.response.data.error,
+            });
         }
 
         // if (error.response.data.error) {

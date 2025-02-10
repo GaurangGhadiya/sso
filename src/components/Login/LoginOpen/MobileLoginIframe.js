@@ -429,6 +429,12 @@ const MobileLoginIframe = ({ service_id, handleChange, redirectForLogin }) => {
               }
             }
           });
+        } else {
+          setAlert({
+            open: true,
+            type: false,
+            message: error.response.data.error,
+          });
         }
 
         // if (error.response.data.error) {

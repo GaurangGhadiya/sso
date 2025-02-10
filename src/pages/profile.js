@@ -383,7 +383,7 @@ const Profile = () => {
 								profilePhoto: uidData?.Pht
 							};
 							const phtResponse = await fetch(
-								`${process?.env?.NEXT_PUBLIC_NODE_HIMPARIVAR}ekyc/upload-ekyc-photo`,
+								`${process?.env?.NEXT_PUBLIC_API_BASE_URL}/upload-ekyc-photo`,
 								{
 									method: "POST",
 									headers: {
